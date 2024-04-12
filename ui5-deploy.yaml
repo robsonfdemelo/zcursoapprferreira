@@ -1,0 +1,26 @@
+specVersion: "2.6"
+type: application
+metadata:
+  name: '****'
+builder:
+  customTasks:
+  - name: zcursoapprferreira
+    afterTask: replaceVersion
+    configuration:
+      target:
+        url: https://sapfioriexed.exedconsulting.com:44300
+        client: '900'
+        auth: basic
+        params:
+          sap-language: en
+      credentials:
+        username: env:UI5_USERNAME
+        password: env:UI5_PASSWORD
+      app:
+        name: zcursoapprferreira
+        package: Z_PACKAGE_FIORI
+        transport: S4HK902984
+      exclude:
+      - .*\.test.js
+      - internal.md
+tem menu de contexto
