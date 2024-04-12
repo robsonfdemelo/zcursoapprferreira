@@ -14,7 +14,7 @@ sap.ui.define(
         var usuario = this.getView().byId("idusuario").getValue();
         var nome = this.getView().byId("idNome").getValue();
         var projesegw = this.getView().byId("idProjSegw").getValue();
-        var email = this.getView().byId("idEmail").getValue();
+        //     var email = this.getView().byId("idEmail").getValue();
 
         if (!usuario) {
           sap.m.MessageBox.error(
@@ -30,7 +30,7 @@ sap.ui.define(
           Usuario: usuario,
           Nome: nome,
           ProjetoSegw: projesegw,
-          Email: email,
+          // Email: email,
         };
 
         this.getView()
@@ -47,7 +47,7 @@ sap.ui.define(
               that.getView().byId("idusuario").setValue("");
               that.getView().byId("idNome").setValue("");
               that.getView().byId("idProjSegw").setValue("");
-              that.getView().byId("idEmail").setValue("");
+              // that.getView().byId("idEmail").setValue("");
             },
             error: function (oError) {
               sap.m.MessageBox.error(
