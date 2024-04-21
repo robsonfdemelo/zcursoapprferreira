@@ -1,0 +1,43 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+>
+    <Dialog
+        class="sapUiContentPadding"
+        title="Adicionar alunos"
+    >
+        <content>
+            <Input
+                placeholder="Informe o Usuario"
+            />
+            <Input
+                placeholder="Informe o Nome"
+            />
+            <Input
+                placeholder="Informe o Email"
+            />
+            <Input
+                placeholder="Informe o Projeto SEGW"
+            />
+        </content>
+        <footer>
+            <Toolbar>
+                <content>
+                    <ToolbarSpacer />
+                    <Button
+                        type="Accept"
+                        text="Gravar"
+                        press="GravaAdicionar"
+                    />
+                    <Button
+                        text="Cancelar"
+                        press="CancelarAdicionar"
+                    />
+                </content>
+            </Toolbar>
+        </footer>
+    </Dialog>
+</core:FragmentDefinition>

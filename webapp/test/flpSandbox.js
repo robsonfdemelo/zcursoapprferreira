@@ -40,7 +40,7 @@ sap.ui.define([
 								"tileType": "sap.ushell.ui.tile.StaticTile",
 								"properties": {
 									"title": "App Title",
-									"targetURL": "#zcursoapprferreira-display"
+									"targetURL": "#zapprferreira-display"
 								}
 							}]
 						}]
@@ -51,8 +51,8 @@ sap.ui.define([
 				"adapter": {
 					"config": {
 						"inbounds": {
-							"zcursoapprferreira-display": {
-								"semanticObject": "zcursoapprferreira",
+							"zapprferreira-display": {
+								"semanticObject": "zapprferreira",
 								"action": "display",
 								"description": "An SAP Fiori application.",
 								"title": "App Title",
@@ -61,8 +61,8 @@ sap.ui.define([
 								},
 								"resolutionResult": {
 									"applicationType": "SAPUI5",
-									"additionalInformation": "SAPUI5.Component=zcursoapprferreira",
-									"url": sap.ui.require.toUrl("zcursoapprferreira")
+									"additionalInformation": "SAPUI5.Component=zapprferreira",
+									"url": sap.ui.require.toUrl("zapprferreira")
 								}
 							}
 						}

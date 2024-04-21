@@ -8,7 +8,7 @@
 |**Template Used**<br>simple|
 |**Service Type**<br>SAP System (ABAP On Premise)|
 |**Service URL**<br>https://sapfioriexed.exedconsulting.com:44300/sap/opu/odata/sap/ZG_CURSO_SAP_FIORI_RFERREIRA_SRV
-|**Module Name**<br>zcursoapprferreira|
+|**Module Name**<br>zapprferreira|
 |**Application Title**<br>App Title|
 |**Namespace**<br>|
 |**UI5 Theme**<br>sap_horizon|
@@ -17,7 +17,7 @@
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
 
-## zcursoapprferreira
+## zapprferreira
 
 An SAP Fiori application.
 

@@ -1,0 +1,63 @@
+<mvc:View xmlns:layout="sap.ui.layout" controllerName="zapprferreira.controller.Detalhe"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:shelbar="sap.f"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns:u="sap.ui.unified">
+    <Page id="page" title="{i18n>title}">
+        <customHeader>
+            <shelbar:ShellBar title="Exed Consulting" showCopilot="false" showSearch="false" showMenuButton="false" showNotifications="false" homeIcon="../Imagens/logo.jpeg" showProductSwitcher="false" showNavButton="true" navButtonPressed="navButtonPressed" />
+        </customHeader>
+        <content>
+            <ObjectHeader title="{Usuario}" icon="../Imagens/logo.jpeg" class="sapUiResponsivePadding--header" />
+            <f:Form class="editableForm" editable="true" id="Form">
+                <f:layout>
+                    <f:ResponsiveGridLayout id="ResponsiveGridLayout" labelSpanXL="2" labelSpanL="2" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false" />
+                </f:layout>
+                <f:formContainers>
+                    <f:FormContainer id="FormContainer0">
+                        <f:formElements>
+                            <f:FormElement label="Nome" visible="false">
+                                <Input width="100%" placeholder="Usuario" value="{Usuario}" editable="{Auxiliar>/editable}" id="Usuario" />
+                            </f:FormElement>
+                            <f:FormElement label="Nome">
+                                <Input width="100%" placeholder="Nome" value="{Nome}" editable="{Auxiliar>/editable}" id="idNome" />
+                            </f:FormElement>
+                            <f:FormElement label="Email">
+                                <Input width="100%" placeholder="Email" value="{Email}" editable="{Auxiliar>/editable}" id="Email" />
+                            </f:FormElement>
+                            <f:FormElement label="ProjetoSegw">
+                                <Input width="100%" placeholder="ProjetoSegw" value="{ProjetoSegw}" editable="{Auxiliar>/editable}" id="ProjetoSegw" />
+                            </f:FormElement>
+                        </f:formElements>
+                    </f:FormContainer>
+                    <f:FormContainer id="FormContainer">
+                        <f:formElements>
+                            <f:FormElement label="CEP">
+                                <Input width="100%" placeholder="CEP" value="{Cep}" editable="{Auxiliar>/editable}" change="onChangeCEP" id="idCep" />
+                            </f:FormElement>
+                            <f:FormElement label="Endereço">
+                                <Input width="100%" placeholder="Endereço" value="{Endereco}" editable="{Auxiliar>/editable}" id="idEndereco" />
+                            </f:FormElement>
+                            <f:FormElement label="Bairro">
+                                <Input width="100%" placeholder="Bairro" value="{Bairro}" editable="{Auxiliar>/editable}" id="idBairro" />
+                            </f:FormElement>
+                        </f:formElements>
+                    </f:FormContainer>
+                </f:formContainers>
+            </f:Form>
+        </content>
+        <footer>
+            <Toolbar id="idOverTollbar">
+                <ToolbarSpacer id="idToolbarSpacerD" />
+                <Button text="Editar" icon="sap-icon://edit" press="onEdita" visible="{Auxiliar>/visibleEdit}"/>
+                <Button text="Salvar" icon="sap-icon://save" press="onSalva" visible="{Auxiliar>/visibleSave}"/>
+                <Button text="Cancelar" icon="sap-icon://cancel" press="onCancela" visible="{Auxiliar>/visibleSave}"/>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

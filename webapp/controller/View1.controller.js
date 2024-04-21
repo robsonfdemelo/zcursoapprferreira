@@ -6,8 +6,8 @@ sap.ui.define(
   function (Controller) {
     "use strict";
 
-    return Controller.extend("zcursoapprferreira.controller.View1", {
-      onInit: function () {},
+    return Controller.extend("zapprferreira.controller.View1", {
+      onInit: function () { },
 
       onCreate: function () {
         var that = this;

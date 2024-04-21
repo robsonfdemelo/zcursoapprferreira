@@ -4,7 +4,7 @@ metadata:
   name: '****'
 builder:
   customTasks:
-  - name: zcursoapprferreira
+  - name: zapprferreira
     afterTask: replaceVersion
     configuration:
       target:
@@ -17,7 +17,7 @@ builder:
         username: env:UI5_USERNAME
         password: env:UI5_PASSWORD
       app:
-        name: zcursoapprferreira
+        name: zapprferreira
         package: Z_PACKAGE_FIORI
         transport: S4HK902984
       exclude:
