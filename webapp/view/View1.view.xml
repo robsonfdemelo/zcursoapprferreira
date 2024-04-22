@@ -10,39 +10,56 @@
     xmlns:u="sap.ui.unified">
     <Page id="page" title="{i18n>title}">
         <customHeader>
-            <shelbar:ShellBar title="Exed Consulting" showCopilot="false" showSearch="false" showMenuButton="false" showNotifications="false" homeIcon="../Imagens/logo.jpeg" showProductSwitcher="false" showNavButton="false" />
+            <shelbar:ShellBar id="_IDGenShellBar1" title="Exed Consulting" showCopilot="false" showSearch="false" showMenuButton="false" showNotifications="false" homeIcon="../Imagens/logo.jpeg" showProductSwitcher="false" showNavButton="false" />
         </customHeader>
         <content>
-            <ObjectHeader title="Curso Fiori" icon="../Imagens/logo.jpeg" class="sapUiResponsivePadding--header">
+            <ObjectHeader id="_IDGenObjectHeader1" title="Curso Fiori" icon="../Imagens/logo.jpeg" class="sapUiResponsivePadding--header">
                 <statuses>
-                    <ObjectStatus text="Em desenvolvimento" state="Error" />
+                    <ObjectStatus id="_IDGenObjectStatus1" text="Em desenvolvimento" state="Error" />
                 </statuses>
-                <ObjectAttribute text="Francisco Mafra - Instrutor" active="false" />
-                <ObjectAttribute text="Ricardo Alcantara - Instrutor" active="false" />
-                <ObjectAttribute text="Material Curso" active="true" press="acessaMaterialCurso" />
-                <ObjectAttribute text="Meu GitHub" active="true" press="acessaGitHub" />
+                <ObjectAttribute id="_IDGenObjectAttribute1" text="Francisco Mafra - Instrutor" active="false" />
+                <ObjectAttribute id="_IDGenObjectAttribute2" text="Ricardo Alcantara - Instrutor" active="false" />
+                <ObjectAttribute id="_IDGenObjectAttribute3" text="Material Curso" active="true" press="acessaMaterialCurso" />
+                <ObjectAttribute id="_IDGenObjectAttribute4" text="Meu GitHub" active="true" press="acessaGitHub" />
             </ObjectHeader>
-            <smartFilterBar:SmartFilterBar id="SF_CURSO" persistencyKey="SmartTablePKey" useToolbar="false" entitySet="AlunosFioriSet" visible="true">
+            <MultiInput id="idUserHelp" valueHelpRequest=".onValueHelpUser" width="60%" suggestionRows="{	path: '/ZshHelpAlunoRfmSet', length: 10 }">
+                <suggestionColumns>
+                    <Column id="_IDGenColumn1">
+                        <Label id="_IDGenLabel1" text="Usuário"/>
+                    </Column>
+                    <Column id="_IDGenColumn2">
+                        <Label id="_IDGenLabel2" text="Nome"/>
+                    </Column>
+                </suggestionColumns>
+                <suggestionRows>
+                    <ColumnListItem id="_IDGenColumnListItem2">
+                        <Label id="_IDGenLabel3" text="{Usuario}" />
+                        <Label id="_IDGenLabel4" text="{Nome}" />
+                    </ColumnListItem>
+                </suggestionRows>
+            </MultiInput>
+            <smartFilterBar:SmartFilterBar id="SF_CURSO" persistencyKey="UniqueAndStablePersistencyKey" entitySet="AlunosFioriSet">
+
                 <smartFilterBar:controlConfiguration>
-                    <smartFilterBar:ControlConfiguration key="Usuario" index="0" label="Usuario" groupId="_BASIC" width="auto" visibleInAdvancedArea="true" />
-                    <smartFilterBar:ControlConfiguration key="Nome" index="1" label="Nome" groupId="_BASIC" width="auto" visibleInAdvancedArea="true" />
+                    <smartFilterBar:ControlConfiguration id="_IDGenControlConfiguration1" key="Usuario" index="0" label="Usuario" groupId="_BASIC" width="auto" visibleInAdvancedArea="true"/>
+                    <smartFilterBar:ControlConfiguration id="_IDGenControlConfiguration2" key="Nome" index="1" label="Nome" groupId="_BASIC" width="auto" visibleInAdvancedArea="true" />
                 </smartFilterBar:controlConfiguration>
             </smartFilterBar:SmartFilterBar>
             <smartTable:SmartTable entitySet="AlunosFioriSet" smartFilterId="SF_CURSO" useExportToExcel="true" useVariantManagement="true" useTablePersonalisation="true" header="Alunos" showRowCount="true" showFullScreenButton="true" enableAutoBinding="true" requestAtLeastFields="Usuario,Nome,Email,ProjetoSegw" initiallyVisibleFields="Usuario,Nome,Email,ProjetoSegw" beforeRebindTable="onBeforeRebindTable" tableType="Table" id="SmartTable">
                 <smartTable:customToolbar>
-                    <OverflowToolbar design="Transparent">
-                        <u:FileUploader name="myFileUpload" change="onChangeArquivo" />
-                        <ToolbarSpacer />
+                    <OverflowToolbar id="_IDGenOverflowToolbar1" design="Transparent">
+                        <u:FileUploader id="_IDGenFileUploader1" name="myFileUpload" change="onChangeArquivo" />
+                        <ToolbarSpacer id="_IDGenToolbarSpacer1" />
                         <OverflowToolbarButton id="btEdit" icon="sap-icon://edit" press="onEdit" />
                         <OverflowToolbarButton id="btAdd" icon="sap-icon://add" press="onAdciona" />
                         <OverflowToolbarButton id="btDelete" icon="sap-icon://delete" press="onDeleta" />
                     </OverflowToolbar>
                 </smartTable:customToolbar>
                 <Table id="idTable" growing="true" mode="MultiSelect">
-                    <ColumnListItem highlight="Success" />
+                    <ColumnListItem id="_IDGenColumnListItem1" highlight="Success" />
                 </Table>
                 <smartTable:layoutData>
-                    <FlexItemData growFactor="1" baseSize="0%" />
+                    <FlexItemData id="_IDGenFlexItemData1" growFactor="1" baseSize="0%" />
                 </smartTable:layoutData>
             </smartTable:SmartTable>
         </content>

@@ -1,0 +1,36 @@
+<Annotations Target="ZG_CURSO_SAP_FIORI_RFERREIRA_SRV.AlunosFiori/Usuario">
+    <Annotations Target="ZG_CURSO_SAP_FIORI_RFERREIRA_SRV.AlunosFiori/Usuario"
+        xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+            <Record Type="com.sap.vocabularies.Common.v1.ValueListType">
+
+                <PropertyValue Property="CollectionPath" String="ZshHelpAlunoSet"/>
+                <PropertyValue Property="SearchSupported" Bool="true"/>
+                <PropertyValue Property="Parameters">
+                    <Collection>
+                        <Record Type="com.sap.vocabularies.Common.v1.ValueListParameterInOut">
+                            <PropertyValue Property="LocalDataProperty" PropertyPath="Usuario"/>
+                            <PropertyValue Property="ValueListProperty" String="Usuario"/>
+                        </Record>
+                        <Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly">
+                            <PropertyValue Property="ValueListProperty" String="Nome"/>
+                        </Record>
+                        <Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly">
+                            <PropertyValue Property="ValueListProperty" String="Email"/>
+                        </Record>
+                        <Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly">
+                            <PropertyValue Property="ValueListProperty" String="Cep"/>
+                        </Record>
+                    </Collection>
+                </PropertyValue>
+
+            </Record>
+        </Annotation>
+    </Annotations>
+    <Annotations Target="ZG_CURSO_SAP_FIORI_RFERREIRA_SRV.AlunosFiori"
+        xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="com.sap.vocabularies.Common.v1.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+    </Annotations>
+</Annotations>
+
+

@@ -12,19 +12,26 @@
     "resources": "resources.json",
     "sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
-      "version": "1.12.4",
-      "toolsId": "3c0d934a-f927-4a04-a707-451d937af864"
+      "version": "1.12.5",
+      "toolsId": "81d15b38-d7b1-42a6-aaa6-ed85a462acb2"
     },
     "dataSources": {
       "mainService": {
         "uri": "/sap/opu/odata/sap/ZG_CURSO_SAP_FIORI_RFERREIRA_SRV/",
         "type": "OData",
         "settings": {
-          "annotations": [],
+          "annotations": ["annotation0"],
           "localUri": "localService/metadata.xml",
           "odataVersion": "2.0"
         }
-      }
+      },
+      "annotation0": {
+        "type": "ODataAnnotation",
+        "uri": "localService/annotation0.xml",
+        "settings": {
+            "localUri": "localService/annotation0.xml"
+        }
+    }
     }
   },
   "sap.ui": {
@@ -72,7 +79,9 @@
       "": {
         "dataSource": "mainService",
         "preload": true,
-        "settings": {}
+        "settings": {
+          "useBatch": false
+        }
       }
     },
     "resources": {
@@ -99,6 +108,12 @@
           "target": [
             "TargetView1"
           ]
+        },{
+          "name" : "RouteDetalhe",
+          "pattern": "Detalhe/{id}",
+          "target": [
+            "TargetDetalhe"
+          ]
         }
       ],
       "targets": {
@@ -108,6 +123,13 @@
           "clearControlAggregation": false,
           "viewId": "View1",
           "viewName": "View1"
+        },
+        "TargetDetalhe": {
+          "viewType": "XML",
+          "transition": "flip",
+          "clearControlAggregation": false,
+          "viewId": "Detalhe",
+          "viewName": "Detalhe"
         }
       }
     },
